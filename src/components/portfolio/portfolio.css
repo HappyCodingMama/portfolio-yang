@@ -1,0 +1,124 @@
+.portfolio__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.container__cardTop {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.portfolio__card {
+  display: flex;
+  flex: 0 0 auto;
+  background: transparent;
+  width: 100%;
+  margin: 2rem 0;
+  border: 1px solid var(--color-primary-variant);
+}
+
+.portfolio__cardImg {
+  width: 300px;
+  flex: 0 0 auto;
+  position: relative;
+  background-color: var(--color-bg-variant);
+  border-right: 1px solid var(--color-primary-variant);
+}
+
+.portfolio__cardImg img {
+  border: 1px solid var(--color-primary);
+  position: absolute;
+  bottom: 2rem;
+  left: 30%;
+  margin-left: -58%;
+  width: 350px;
+}
+
+.portfolioTitle {
+  padding: 3rem 0;
+}
+.portfolioTitle h1 {
+  font-size: 2.5rem;
+}
+.portfolio__card small {
+  margin: 0;
+}
+.portfolio__card p {
+  color: var(--color-light);
+}
+.portfolio__cardContent {
+  padding: 1rem 1rem 1rem;
+}
+
+.portfolio__card small {
+  color: var(--color-light);
+}
+
+.portfolio__item {
+  border: 1px solid var(--color-primary-variant);
+  background: transparent;
+  padding: 2rem;
+  transition: var(--transition);
+}
+
+.portfolio__item:hover {
+  transform: translateY(5px);
+  background-image: linear-gradient(rgba(47, 0, 8, 0.9), rgba(0, 0, 0, 0.4));
+}
+
+.portfolio__item-image {
+  filter: grayscale(100%);
+  overflow: hidden;
+}
+.portfolio__item h1 {
+  margin: 1rem 0;
+}
+
+.horizontalLine {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid var(--color-primary-variant);
+  line-height: 0.1em;
+  margin: 1rem 0;
+}
+
+.portfolio__item h3 {
+  line-height: normal;
+  margin: 0;
+}
+
+.portfolio__itemCta__container small {
+  color: var(--color-primary);
+}
+
+.portfolio__itemCta__container {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  margin: 0.4rem 0 0;
+}
+
+.portfolio__itemCta {
+  margin: 0 1rem;
+}
+
+.portfolioCta1 {
+  padding-right: 0.5rem;
+}
+
+/* Media queries (tablet) */
+@media screen and (max-width: 1024px) {
+  .portfolio__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+}
+
+/* Media queries (mobile) */
+@media screen and (max-width: 600px) {
+  .portfolio__container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

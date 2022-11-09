@@ -1,0 +1,49 @@
+.contact__container:before {
+  margin: 1rem 0 1rem;
+  content: 'hello';
+  font-family: 'Pinyon Script', cursive;
+  font-size: 30rem;
+  position: absolute;
+  color: var(--color-dark);
+  top: 238rem;
+  letter-spacing: 1rem;
+  right: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.container.contact__container {
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.contact__options h5 {
+  line-height: normal;
+  margin-bottom: 1rem;
+}
+
+.contact__icon {
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
+small {
+  line-height: 0;
+}
+
+/* media queries (tablet) */
+@media screen and (max-width: 1024px) {
+  .container.contact__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* media queries (mobile) */
+@media screen and (max-width: 600px) {
+  .container.contact__container {
+    width: var(container-width-sm);
+  }
+}
