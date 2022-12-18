@@ -3,6 +3,7 @@ import './contact.css';
 import { FiLinkedin } from 'react-icons/fi';
 import { FiGithub } from 'react-icons/fi';
 import { FiInstagram } from 'react-icons/fi';
+import { MdAlternateEmail } from 'react-icons/md';
 
 const Contact = () => {
   return (
@@ -12,7 +13,7 @@ const Contact = () => {
         <h5>
           Got a question or proposal, or just want to say hello? Go ahead.
         </h5>
-        <article className='footer__socials'>
+        <article className='contact__socials'>
           <a
             href='https://linkedin.com'
             className='contact__icon'
@@ -41,7 +42,7 @@ const Contact = () => {
 
         <div className='btn__mails'>
           <a href='#' className='btn'>
-            <FiInstagram className='btn__icons' /> | Send Message
+            <MdAlternateEmail className='btn__icons' /> | Send Message
           </a>
         </div>
       </div>

@@ -1,0 +1,108 @@
+.testimonial__container .title {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.section-center {
+  margin: 0 auto;
+  margin-top: 4rem;
+  width: 80vw;
+  height: 300px;
+  max-width: 800px;
+  position: relative;
+  display: flex;
+
+  overflow: hidden;
+}
+
+.people-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 0px 50px;
+}
+
+.people-image {
+  padding: 6px;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
+}
+.people-image img {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+}
+
+.people-quote {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.quote_title {
+  margin-top: 16px;
+  font-size: 0.9rem;
+}
+.quote_text {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  color: var(--color-white);
+}
+
+.quote_name {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.section-center article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.4s linear;
+}
+
+article.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+article.lastSlide {
+  transform: translateX(-100%);
+}
+
+article.nextSlide {
+  transform: translateX(100%);
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 60px;
+  background-color: transparent;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.prev {
+  left: 0px;
+}
+
+.next {
+  right: 0px;
+}
+
+.prev:hover,
+.next:hover {
+  color: var(--color-white);
+}

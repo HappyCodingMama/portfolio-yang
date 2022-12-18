@@ -1,102 +1,41 @@
-.skills__container:before {
-  margin: 1rem 0 1rem;
-  content: 'j';
-  font-family: 'Pinyon Script', cursive;
-  font-size: 50rem;
-  position: absolute;
-  color: var(--color-bg);
-  top: 75rem;
-  right: 0;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.skills__container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  padding: 1rem 0 9rem;
-  background-color: var(--color-primary-variant);
-  opacity: 0.6;
-  color: var(--color-bg);
-  border: 1px solid var(--color-bg);
-}
-
 .skills__container .title {
   text-align: center;
-  color: var(--color-bg);
+  padding-top: 0;
 }
-
-.skills__content {
+.skills__items {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.875rem;
 }
 
-/* table */
-
-.skills__containerTable {
-  align-items: center;
-}
-
-.skills__horizontalLine {
+.skills__card {
+  margin-top: 40px;
   text-align: center;
-  border-bottom: 1px dashed var(--color-bg);
-  margin: 0.5rem 0;
-  transform: scaleX(3);
+  padding: 1.875rem;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid var(--color-primary-variant);
+  color: var(--color-white);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.skills__tableText {
-  font-size: 1.1rem;
-  padding: 0.4rem 1.2rem;
-  overflow: hidden;
-}
-.skill__contentLevel {
-  font-size: 1 rem;
+.skills__card:hover {
+  transform: translateY(-10px);
+
+  background-color: rgba(255, 0, 0, 0.1);
 }
 
-.skills__tableText small {
-  font-size: 1.1rem;
-  padding: 0.4rem 1.2rem;
-  overflow: hidden;
+.skills__icon {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+}
+.skills__title {
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
 }
 
-.skills__table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.skills__table td {
-  border: 2px solid var(--color-bg);
-  padding: 8px;
-}
-
-.skills__table td:hover {
-  background-color: var(--color-white);
-  transition: 0.5s ease;
-}
-
-/* media queries (tablet) */
-@media screen and (max-width: 1024px) {
-  .skills__container {
-    grid-template-columns: 1fr;
-  }
-
-  .skills__containerTable {
-    width: var(--container-width-md);
-    padding: 2rem;
-    margin: 0 auto;
-  }
-
-  .skills__container:before {
-    top: 100rem;
-    opacity: 0.2;
-  }
-}
-
-/* media queries (mobile) */
-@media screen and (max-width: 600px) {
-  .skills__content {
-    grid-template-columns: 1fr;
-  }
+.skills__description {
+  font-weight: 300;
 }

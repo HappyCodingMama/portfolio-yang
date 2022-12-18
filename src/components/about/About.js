@@ -1,30 +1,7 @@
 import React, { useState } from 'react';
 import './about.css';
-import { BiPlus } from 'react-icons/bi';
-import { BiMinus } from 'react-icons/bi';
 
 const About = () => {
-  const [clickedLeft, setClickedLeft] = useState(false);
-  const [clickedRight, setClickedRight] = useState(false);
-
-  const index = document.querySelector('.about__detailsLeft');
-
-  const indexRight = document.querySelector('.about__detailsRight');
-
-  const toggle = (index) => {
-    if (clickedLeft === index) {
-      return setClickedLeft(null);
-    }
-    setClickedLeft(index);
-  };
-
-  const toggleRight = (indexRight) => {
-    if (clickedRight === indexRight) {
-      return setClickedRight(null);
-    }
-    setClickedRight(indexRight);
-  };
-
   return (
     <section id='about'>
       <h2 className='title'>About .</h2>
@@ -44,52 +21,64 @@ const About = () => {
         </div>
 
         <div className='about_containerDetail'>
-          <article className='about__dropdown'>
-            <div
-              className='about__detailsLeft'
-              onClick={() => toggle(index)}
-              key={index}
-            >
-              <h4>
-                {clickedLeft === index ? (
-                  <BiMinus className='btn__icons' />
-                ) : (
-                  <BiPlus className='btn__icons' />
-                )}{' '}
-                Education
-              </h4>
-            </div>
-            {clickedLeft === index ? (
-              <dir className='dropdown'>
-                <p>2005 - 2009 | Bachelor of Multimedia</p>
-                <p>2002 - 2004 | Associated Diploma of Computer Graphics</p>
-              </dir>
-            ) : null}
-          </article>
+          <div className='education'>
+            <h3 className='about__title'>Education</h3>
 
-          <article className='about__dropdown'>
-            <div
-              className='about__detailsRight'
-              onClick={() => toggleRight(indexRight)}
-              key={indexRight}
-            >
-              <h4>
-                {clickedRight === indexRight ? (
-                  <BiMinus className='btn__icons' />
-                ) : (
-                  <BiPlus className='btn__icons' />
-                )}{' '}
-                Where I’ve Worked
-              </h4>
+            <div className='timeline'>
+              <div className='timeline__item'>
+                <div className='circle__dot'></div>
+                <span className='timeline__title'>
+                  Bachelor of Computer Science
+                </span>
+                <p className='timeline__date'>2005 - 2009</p>
+              </div>
+              <div className='timeline__item'>
+                <div className='circle__dot'></div>
+                <span className='timeline__title'>Bachelor of Multimedia</span>
+                <p className='timeline__date'>2005 - 2009</p>
+              </div>
+
+              <div className='timeline__item'>
+                <div className='circle__dot'></div>
+                <span className='timeline__title'>
+                  Associate of Computer Graphics
+                </span>
+
+                <p className='timeline__date'>2002 - 2004</p>
+              </div>
             </div>
-            {clickedRight === indexRight ? (
-              <dir className='dropdown'>
-                <p>2005 - 2009 | CJ EnM</p>
-                <p>2002 - 2004 | FOX network Korea</p>
-                <p>2002 - 2004 | CJ Media chCGV FOXlife</p>
-              </dir>
-            ) : null}
-          </article>
+          </div>
+
+          <div className='experience'>
+            <h3 className='about__title'>Experience</h3>
+
+            <div className='timeline'>
+              <div className='timeline__item'>
+                <div className='circle__dot'></div>
+                <span className='timeline__title'>
+                  Apple | Assistant Manager
+                </span>
+
+                <p className='timeline__date'>2010 - 2020</p>
+              </div>
+
+              <div className='timeline__item'>
+                <div className='circle__dot'></div>
+                <span className='timeline__title'>
+                  Microsoft | Full Stack Developer
+                </span>
+
+                <p className='timeline__date'>2006 - 2009</p>
+              </div>
+
+              <div className='timeline__item'>
+                <div className='circle__dot'></div>
+                <span className='timeline__title'>Google | Intership</span>
+
+                <p className='timeline__date'>2005 - 2006</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

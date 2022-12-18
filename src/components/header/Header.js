@@ -8,16 +8,22 @@ const Header = () => {
   return (
     <header>
       <div className='container header__container'>
-        <h2>Hello,</h2>
-        <h1>I'm a Designer and Frontend Developer</h1>
-        <h1>based in Vancouver, Canada.</h1>
-        <h4>
-          I like creating <span> beautiful things</span> with <span>code</span>.
-        </h4>
-        <h4>
-          Everyday I try to <span>keep up with</span> the latest{' '}
-          <span> technology </span> trends.
-        </h4>
+        <div className='header__name'>
+          <h2>Hello,</h2>
+          <h1>I'm a Designer and Frontend Developer</h1>
+          <h1>based in Vancouver, Canada.</h1>
+        </div>
+        <div className='header__goal'>
+          <h4>
+            I like creating <span> beautiful things</span> with{' '}
+            <span>code</span>.
+          </h4>
+          <h4>
+            Everyday I try to <span>keep up with</span> the latest{' '}
+            <span> technology </span> trends.
+          </h4>
+        </div>
+
         <CTA />
         <HeaderSocials />
 

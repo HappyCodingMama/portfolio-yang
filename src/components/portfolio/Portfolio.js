@@ -6,6 +6,7 @@ import PFIMG1 from '../../assets/portfolio1.jpg';
 import PFIMG2 from '../../assets/portfolio2.jpg';
 import PFIMG3 from '../../assets/portfolio3.jpg';
 import PFIMG4 from '../../assets/portfolio4.jpg';
+import PFIMG5 from '../../assets/portfolio5.jpg';
 
 const Portfolio = () => {
   return (
@@ -163,7 +164,7 @@ const Portfolio = () => {
 
         <article className='portfolio__item'>
           <div className='portfolio__item-image'>
-            <img src={PFIMG4} alt='PFIMG' />
+            <img src={PFIMG5} alt='PFIMG' />
           </div>
           <h1>PORTFOLIO</h1>
           <div className='horizontalLine'></div>
